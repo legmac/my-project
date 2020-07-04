@@ -9,6 +9,9 @@
   <ul>
     <li v-for="pers of filteredNames">{{pers}}</li>
   </ul>
+
+  <hr>
+  <app-list></app-list>
   </div>
 </template>
 
