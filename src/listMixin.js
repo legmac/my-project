@@ -12,5 +12,8 @@ export default{
             return name.toLowerCase().indexOf(this.searchName.toLowerCase()) !== -1;
           });
         }
-      }
+      },
+      created() {
+          console.log('wtf', 'created')
+      },
 }
