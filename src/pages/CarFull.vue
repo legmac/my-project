@@ -15,6 +15,10 @@ export default {
         year(){
             return this.$route.query.year
         }
+    },
+    beforeRouteEnter (to, from, next) {
+        console.log('wtf','guard BRE')
+        next()
     }
   
 };

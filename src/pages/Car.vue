@@ -14,8 +14,8 @@
       tag="button"
       class="btn btn-sm btn-info mt-2"
       :to="{name:'carFull', params:{id: id}, query:{name:'Mazda', year:200},hash:'#sc'}"
-    >Full Info </router-link>
- <!-- params:{id: id}}"  peredati parametri id so znaceniem id -->
+    >Full Info</router-link>
+    <!-- params:{id: id}}"  peredati parametri id so znaceniem id -->
     <hr />
     <!-- Vivod otobrajenia routa -->
     <router-view></router-view>
@@ -38,6 +38,14 @@ export default {
   watch: {
     $route(toR, fromR) {
       this.id = toR.params["id"];
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log("wtf", "router Leave");
+    if(window.confirm('Are you shure leave')){
+      next()
+    }else{
+      next(false)
     }
   }
 };
