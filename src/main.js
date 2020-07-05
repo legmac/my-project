@@ -3,6 +3,7 @@ import Vuelidate from 'vuelidate'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import List from './List.vue'
+import router from './routes'
 
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
@@ -19,5 +20,6 @@ Vue.component('app-list', List)
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router: router // mojno prosto router
 })
