@@ -8,12 +8,12 @@
 
 <script>
 // import OnOff from "./OnOff.vue";
-import L81 from "./valid_l8.vue"
+// import L81 from "./valid_l8.vue"
 import L9 from './l9_route.vue'
 export default {
   components:{
     //  appOnoff: OnOff,
-     appL81: L81,
+    //  appL81: L81,
      appL9 : L9
   }
 };
