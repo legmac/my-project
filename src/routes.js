@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Cars from './pages/Cars'
 import Car from './pages/Car'
 import CarFull from './pages/CarFull'
+import L9Res from './pages/L9_resource'
 import ErrorCmp from './pages/Error.vue'
 
 // const Cars = resolve => {
@@ -16,6 +17,7 @@ import ErrorCmp from './pages/Error.vue'
 export default new VueRouter({
     routes: [
         { path: '', component: Home },
+        { path: '/res', component: L9Res },
         { path: '/cars', component: Cars, name: 'cars' },
         {
             path: '/car/:id', component: Car, children: [{

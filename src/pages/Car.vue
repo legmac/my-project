@@ -39,15 +39,15 @@ export default {
     $route(toR, fromR) {
       this.id = toR.params["id"];
     }
-  },
-  beforeRouteLeave(to, from, next) {
-    console.log("wtf", "router Leave");
-    if(window.confirm('Are you shure leave')){
-      next()
-    }else{
-      next(false)
-    }
   }
+  // beforeRouteLeave(to, from, next) {
+  //   console.log("wtf", "router Leave");
+  //   if(window.confirm('Are you shure leave')){
+  //     next()
+  //   }else{
+  //     next(false)
+  //   }
+  //}
 };
 </script>
 
