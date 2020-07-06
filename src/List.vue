@@ -5,7 +5,7 @@
     <input type="text" v-model="searchName" />
 
     <ul>
-      <li v-for="pers of filteredNames">{{pers}}</li>
+      <li v-for="pers of filteredNames" :key="pers">{{pers}}</li>
     </ul>
   </div>
 </template>
