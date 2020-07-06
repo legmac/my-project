@@ -17,9 +17,13 @@
           <router-link tag="li" class="nav-link" to="/car/4" active-class="active">
             <a class="nav-link">Car 4</a>
           </router-link>
-           <router-link tag="li" class="nav-link" to="/res" active-class="active">
+          <router-link tag="li" class="nav-link" to="/res" active-class="active">
             <a class="nav-link">Res</a>
           </router-link>
+          <router-link tag="li" class="nav-link" to="/store" active-class="active">
+            <a class="nav-link">Store</a>
+          </router-link>
+
           <!-- 
              <li class="nav-item">
             <router-link class="nav-link" to="/">Home</router-link>

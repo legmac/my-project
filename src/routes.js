@@ -5,6 +5,7 @@ import Car from './pages/Car'
 import CarFull from './pages/CarFull'
 import L9Res from './pages/L9_resource'
 import ErrorCmp from './pages/Error.vue'
+import L10St from './pages/L10/App'
 
 // const Cars = resolve => {
 //     require.ensure(['./pages/Cars'], () => {
@@ -18,6 +19,7 @@ export default new VueRouter({
     routes: [
         { path: '', component: Home },
         { path: '/res', component: L9Res },
+        { path: '/store', component: L10St },
         { path: '/cars', component: Cars, name: 'cars' },
         {
             path: '/car/:id', component: Car, children: [{

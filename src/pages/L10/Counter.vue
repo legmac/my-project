@@ -1,14 +1,16 @@
 <template>
     <div class="container">
-<h3>Store</h3>
+       <h2>Counter {{counter}}</h2>
     </div>
 </template>
 
 <script>
 export default {
+    props:['counter']
     
 }
 </script>
-<style>
-    
+
+<style scoped>
+
 </style>
