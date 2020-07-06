@@ -9,6 +9,10 @@ import router from './routes'
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.http.options.root = 'http://10.211.55.11:3300/';
+Vue.http.interceptors.push(request =>{
+  request.headers.set('Auth', 'SOME TOKEN'+Math.random());
+})
 // Vue.filter('uppercase', (value)=>{return value.toUpperCase()})
 // Vue.filter('uppercase', value => value.toUpperCase())
 

@@ -38,29 +38,34 @@ export default {
         name: this.carName,
         yaer: this.carYer
       };
-      this.$http
-        .post("http://10.211.55.11:3300/cars", car)
-        .then(response => {
-          return response.json();
-        })
-        .then(newCar => {
-          console.log("wtf", newCar);
-        });
+      // this.$http
+      //   .post("http://10.211.55.11:3300/cars", car)
+      //   .then(response => {
+      //     return response.json();
+      //   })
+      //   .then(newCar => {
+      //     console.log("wtf", newCar);
+      //   });
+      this.resource.save({}, car)
     },
     LoadCars() {
-      this.$http
-        .get("http://10.211.55.11:3300/cars")
-        .then(response => {
-          return response.json();
-        })
-        .then(allCar => {
-            console.log("wtf", allCar);
-          this.cars = allCar
-        });
+      // this.$http
+      //   .get("http://10.211.55.11:3300/cars")
+      //   .then(response => {
+      //     return response.json();
+      //   })
+      //   .then(allCar => {
+      //       console.log("wtf", allCar);
+      //     this.cars = allCar
+      //   });
+
+      this.resource.get().then(reponse=>reponse.json())
+      .then(cars => this.cars = cars)
     }
   },
-  created(resource){
-    this.resource = this.$resource('http://10.211.55.11:3300/cars')
+  created(){
+    // this.resource = this.$resource('http://10.211.55.11:3300/cars')
+     this.resource = this.$resource('cars')
   }
 };
 </script>
